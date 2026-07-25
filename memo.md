@@ -396,3 +396,17 @@ def verify_gain(method_val, baseline_val, claimed_pct):
 3. 论文B新增的XSimGCL和Beliefs实验数据均来自真实实验结果文件
 4. 未编造任何数据，未硬编码任何数字
 5. Coverage/Diversity指标因无实验数据支撑，未添加（避免编造）
+
+### 8.5 XSimGCL对比论述加强（2026-07-26）
+
+| 修改项 | 内容 | 影响位置 |
+|--------|------|---------|
+| **XSimGCL对比段加强** | 在§2.7讨论"与XSimGCL的对比及核心贡献界定"段末尾追加：明确指出XSimGCL不含profile侧信息；Beliefs上XSimGCL领先说明该域profile边际效价为负，与设计原则0第(ii)条预期一致；IntTravel上XSimGCL落后87.5%的"反转"格局表明极稀疏域需profile间接正则化；总结"不存在单一方法通吃所有域，XSimGCL与CV-CLER各擅其域，恰恰强化而非削弱了设计原则0的方法论价值" | §2.7讨论，第618行 |
+
+**数据溯源核查**：
+- XSimGCL不含profile侧信息：事实陈述，无数字
+- Beliefs XSimGCL领先 → 0.1875 vs CV-CLER 0.1736，来源 new_baselines_beliefs_results.json + beliefs_5seed_results.json
+- IntTravel XSimGCL落后87.5% → (0.0090-0.00480)/0.00480 = 87.5%，来源 inttravel_cvcler_mmssl_results.json + inttravel_xsimgcl_5seed_results.json
+- ρ、c_u、q_profile引用 → 来自表5选路规则，无新数字
+
+**修改目的**：回应用户关于"XSimGCL是否超越我们所有方法、论文价值是否下降"的疑问，通过加强论述明确：XSimGCL仅在Beliefs单一域领先，Stravl统计持平，IntTravel大幅落后；论文核心贡献是"按域选路框架"而非"单一方法称王"，XSimGCL的部分领先反而增强了核心论点的说服力。未编造任何数据，所有数字均可溯源。
