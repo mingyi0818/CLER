@@ -1,0 +1,31 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam handwritten false
+skinparam shadowing false
+skinparam defaultFontSize 11
+skinparam defaultFontName "Microsoft YaHei"
+
+title 
+
+rectangle "BPR" as BPR #FFE0B2
+rectangle "CLER" as CLER #FFCC80
+rectangle "CV-CLER" as CVCLER #FFB74D
+rectangle "ARFusion-Rec" as ARFusion #FF9800
+
+BPR --> CLER : +L_UI
+CLER --> CVCLER : +L_CV
+CVCLER --> ARFusion : +lambda_u, L_PBD
+
+rectangle "CV-CLER\n评分解耦" as Path1 #BBDEFB
+rectangle "ARFusion-Rec\ndual模式" as Path2 #C8E6C9
+rectangle "CV-CLER\n评分解耦" as Path3 #FFCDD2
+
+CVCLER --> Path1
+ARFusion --> Path2
+ARFusion --> Path3
+
+note top of Path1 : 中等密度域\n(e.g., Stravl)\n仅行为打分: e_u . e_i
+note top of Path2 : 极稀疏 +\nprofile语义清晰\nlambda_u * s_collab\n+ (1-lambda_u) * s_prof
+note top of Path3 : 极稀疏 +\nprofile语义模糊\n如 IntTravel 匿名字段
+
+@enduml
