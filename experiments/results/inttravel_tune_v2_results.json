@@ -1,0 +1,198 @@
+{
+  "target_ndcg10": 0.00737,
+  "aligned_loader": true,
+  "dataset_stats": {
+    "dataset": "IntTravel",
+    "n_users": 25000,
+    "n_items": 87612,
+    "n_interactions": 128837,
+    "n_train": 78837,
+    "n_val": 25000,
+    "n_test": 25000,
+    "n_positive_train": 78837,
+    "n_positive_test": 25000,
+    "n_test_users": 25000,
+    "min_unique_pois": 5,
+    "max_users_cap": 25000,
+    "positive_action_types": [
+      2,
+      3
+    ],
+    "profile_feat_dim": 45,
+    "split": "1/1/1 for 3-POI users; 8/1/1 otherwise on deduplicated positive POIs",
+    "mean_unique_pois_per_user": 5.15348,
+    "median_unique_pois_per_user": 5.0,
+    "shards": [
+      "interaction_1.csv",
+      "interaction_2.csv",
+      "interaction_3.csv"
+    ],
+    "n_shards": 3
+  },
+  "baselines": {
+    "Multimodal CF": {
+      "precision@10": 0.001436,
+      "recall@10": 0.01436,
+      "f1@10": 0.0026109090909090913,
+      "ndcg@10": 0.006561006404621178,
+      "n_eval_users": 25000
+    },
+    "BPR": {
+      "precision@10": 0.001188,
+      "recall@10": 0.01188,
+      "f1@10": 0.00216,
+      "ndcg@10": 0.006922299092685968,
+      "n_eval_users": 25000
+    }
+  },
+  "grid_results": [
+    {
+      "id": 0,
+      "overrides": {
+        "score_mode": "additive",
+        "cv_weight": 0.0,
+        "pbd_weight": 0.0,
+        "cl_weight": 0.0
+      },
+      "metrics": {
+        "precision@10": 0.00142,
+        "recall@10": 0.0142,
+        "f1@10": 0.002581818181818182,
+        "ndcg@10": 0.006553317516791214,
+        "n_eval_users": 25000
+      }
+    },
+    {
+      "id": 1,
+      "overrides": {
+        "score_mode": "additive",
+        "cv_weight": 0.02,
+        "pbd_weight": 0.01,
+        "cl_weight": 0.05
+      },
+      "metrics": {
+        "precision@10": 0.001508,
+        "recall@10": 0.01508,
+        "f1@10": 0.002741818181818182,
+        "ndcg@10": 0.006861430319572745,
+        "n_eval_users": 25000
+      }
+    },
+    {
+      "id": 2,
+      "overrides": {
+        "score_mode": "additive",
+        "cv_weight": 0.05,
+        "pbd_weight": 0.02,
+        "cl_weight": 0.08
+      },
+      "metrics": {
+        "precision@10": 0.0015360000000000003,
+        "recall@10": 0.01536,
+        "f1@10": 0.0027927272727272727,
+        "ndcg@10": 0.007273437818770022,
+        "n_eval_users": 25000
+      }
+    },
+    {
+      "id": 3,
+      "overrides": {
+        "score_mode": "additive",
+        "cv_weight": 0.08,
+        "pbd_weight": 0.04,
+        "cl_weight": 0.1
+      },
+      "metrics": {
+        "precision@10": 0.001532,
+        "recall@10": 0.01532,
+        "f1@10": 0.002785454545454545,
+        "ndcg@10": 0.007010295340930383,
+        "n_eval_users": 25000
+      }
+    },
+    {
+      "id": 4,
+      "overrides": {
+        "score_mode": "dual",
+        "cv_weight": 0.05,
+        "pbd_weight": 0.02,
+        "cl_weight": 0.08
+      },
+      "metrics": {
+        "precision@10": 0.00154,
+        "recall@10": 0.0154,
+        "f1@10": 0.0028,
+        "ndcg@10": 0.007345308098691385,
+        "n_eval_users": 25000
+      }
+    },
+    {
+      "id": 5,
+      "overrides": {
+        "score_mode": "dual",
+        "cv_weight": 0.1,
+        "pbd_weight": 0.05,
+        "cl_weight": 0.1
+      },
+      "metrics": {
+        "precision@10": 0.001508,
+        "recall@10": 0.01508,
+        "f1@10": 0.002741818181818181,
+        "ndcg@10": 0.006980566590310077,
+        "n_eval_users": 25000
+      }
+    },
+    {
+      "id": 6,
+      "overrides": {
+        "score_mode": "collab",
+        "cv_weight": 0.05,
+        "pbd_weight": 0.02,
+        "cl_weight": 0.08
+      },
+      "metrics": {
+        "precision@10": 0.0012200000000000002,
+        "recall@10": 0.0122,
+        "f1@10": 0.002218181818181818,
+        "ndcg@10": 0.006089115383581382,
+        "n_eval_users": 25000
+      }
+    },
+    {
+      "id": 7,
+      "overrides": {
+        "score_mode": "additive",
+        "cv_weight": 0.03,
+        "pbd_weight": 0.01,
+        "cl_weight": 0.06,
+        "lr": 0.0008
+      },
+      "metrics": {
+        "precision@10": 0.00146,
+        "recall@10": 0.0146,
+        "f1@10": 0.0026545454545454546,
+        "ndcg@10": 0.006579432758999586,
+        "n_eval_users": 25000
+      }
+    }
+  ],
+  "best": {
+    "ndcg@10": 0.007345308098691385,
+    "id": 4,
+    "overrides": {
+      "score_mode": "dual",
+      "cv_weight": 0.05,
+      "pbd_weight": 0.02,
+      "cl_weight": 0.08
+    },
+    "metrics": {
+      "precision@10": 0.00154,
+      "recall@10": 0.0154,
+      "f1@10": 0.0028,
+      "ndcg@10": 0.007345308098691385,
+      "n_eval_users": 25000
+    }
+  },
+  "beats_target": false,
+  "elapsed_sec": 993.5715095996857
+}

@@ -1,0 +1,11 @@
+# CLER / CV-CLER / ARFusion-Rec 复现环境依赖
+# Python 3.10+ tested on Windows 11 / Linux
+# Install: pip install -r requirements.txt
+
+torch>=2.0.0
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+scikit-learn>=1.2.0
+tqdm>=4.65.0
+matplotlib>=3.7.0

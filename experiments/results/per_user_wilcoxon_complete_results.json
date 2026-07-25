@@ -1,0 +1,57 @@
+{
+  "experiment": "Complete per-user Wilcoxon signed-rank tests (Stravl, seed=42)",
+  "date": "2026-07-25",
+  "seed": 42,
+  "n_users": 24614,
+  "comparisons": {
+    "ARFusion-Rec vs BPR": {
+      "n_users": 24614,
+      "n_nonzero_diff": 2597,
+      "mean_diff": 0.006043049033723105,
+      "wilcoxon_stat": 2022348.0,
+      "wilcoxon_p_one_sided": 7.957541258381671e-19
+    },
+    "ARFusion-Rec vs CLER": {
+      "n_users": 24614,
+      "n_nonzero_diff": 1836,
+      "mean_diff": 0.0021609694243637516,
+      "wilcoxon_stat": 966386.0,
+      "wilcoxon_p_one_sided": 2.917111965997736e-08
+    },
+    "ARFusion-Rec vs CV-CLER": {
+      "n_users": 24614,
+      "n_nonzero_diff": 1162,
+      "mean_diff": -4.911871995972724e-05,
+      "wilcoxon_stat": 331550.5,
+      "wilcoxon_p_one_sided": 0.7091325253866931
+    },
+    "ARFusion-Rec vs Multimodal CF": {
+      "n_users": 24614,
+      "n_nonzero_diff": 3046,
+      "mean_diff": 0.01464840905640535,
+      "wilcoxon_stat": 3076500.5,
+      "wilcoxon_p_one_sided": 4.779233327538561e-55
+    },
+    "CV-CLER vs BPR": {
+      "n_users": 24614,
+      "n_nonzero_diff": 2569,
+      "mean_diff": 0.006092167753682833,
+      "wilcoxon_stat": 1993432.5,
+      "wilcoxon_p_one_sided": 3.758616314583481e-20
+    },
+    "CV-CLER vs CLER": {
+      "n_users": 24614,
+      "n_nonzero_diff": 1711,
+      "mean_diff": 0.0022100881443234788,
+      "wilcoxon_stat": 859324.0,
+      "wilcoxon_p_one_sided": 2.560983385557275e-10
+    },
+    "CV-CLER vs Multimodal CF": {
+      "n_users": 24614,
+      "n_nonzero_diff": 3083,
+      "mean_diff": 0.014697527776365077,
+      "wilcoxon_stat": 3129488.5,
+      "wilcoxon_p_one_sided": 1.1552902340960303e-52
+    }
+  }
+}

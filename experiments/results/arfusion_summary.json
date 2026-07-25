@@ -1,0 +1,18 @@
+{
+  "source": "ARFusion_Research/experiments/results",
+  "stravl": {
+    "ARFusion-Rec": {"precision@10": 0.0113, "recall@10": 0.1021, "ndcg@10": 0.0562},
+    "CV-CLER": {"ndcg@10": 0.0557},
+    "CLER": {"ndcg@10": 0.0532},
+    "BPR": {"ndcg@10": 0.0506},
+    "Multimodal CF": {"ndcg@10": 0.0397}
+  },
+  "inttravel_three_shard": {
+    "ARFusion-Rec": {"precision@10": 0.00154, "recall@10": 0.0154, "ndcg@10": 0.00735},
+    "BPR": {"ndcg@10": 0.00692},
+    "Multimodal CF": {"ndcg@10": 0.00656},
+    "CLER": {"ndcg@10": 0.0050},
+    "CV-CLER": {"ndcg@10": 0.0036},
+    "wilcoxon_vs_mmcf": {"p": 0.010, "delta_ndcg": 0.00079}
+  }
+}
