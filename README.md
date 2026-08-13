@@ -288,34 +288,9 @@ export CLER_DATA_ROOT=/path/to/your/datasets
 $env:CLER_DATA_ROOT = "D:\my\datasets"
 ```
 
-## 关键实验结果
+## 实验结果
 
-以下为论文中报告的核心结果，均可在对应JSON文件中溯源：
-
-### Stravl-Data（5种子均值）
-
-| 方法 | NDCG@10 | 来源文件 |
-|------|---------|----------|
-| BPR | 0.0495 | stravl_5seed_results.json |
-| Multimodal CF | 0.0420 | stravl_5seed_results.json |
-| CLER | 0.0527 | stravl_5seed_results.json |
-| CV-CLER | 0.0557 | cvcler_5seed_results.json |
-| ARFusion-Rec | 0.0550 | stravl_5seed_results.json |
-
-### MovieLens-1M（seed=42）
-
-| 方法 | NDCG@10 | 来源文件 |
-|------|---------|----------|
-| BPR | 0.1779 | cross_dataset_results.json |
-| CLER | 0.1870 | cross_dataset_results.json |
-| CV-CLER | 0.1888 | cross_dataset_results.json |
-
-### IntTravel三分片（seed=42）
-
-| 方法 | NDCG@10 | 来源文件 |
-|------|---------|----------|
-| BPR | 0.00692 | inttravel_cvcler_mmssl_results.json |
-| CV-CLER | 0.0090 | inttravel_cvcler_mmssl_results.json |
+运行上方命令将在本地 `results/` 目录下重新生成全部指标、消融实验与论文图表（本仓库**不**存储 `results/`）。为避免提前公开未发表结果，本文档**不**预先刊登具体数值；审稿人可通过运行代码自行复现。
 
 ## 常见问题
 
